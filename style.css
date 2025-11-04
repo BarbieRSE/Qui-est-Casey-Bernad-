@@ -1,10 +1,123 @@
 /* =========================================
+   1. COULEURS ET POLICES 
+   ========================================= */
+:root {
+    /* Couleurs pour un style "Barbiecore Impact" */
+    --barbie-pink-dark: #DA1884; /* Rose Vif (Boutons actifs, accents forts, cœurs) */
+    --barbie-pink-light: #FEE7F2; /* Rose Très Clair (Fond de page) */
+    --barbie-accent: #E584A2; /* Rose Intermédiaire (Bordures principales) */
+    --barbie-text: #2c2c2c; /* Gris très foncé (pour l'accessibilité) */
+    --barbie-background: white; /* Fond des blocs principaux pour la clarté */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--barbie-pink-light);
+    color: var(--barbie-text);
+    text-align: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: var(--barbie-pink-dark);
+    font-weight: 700;
+}
+
+/* =========================================
+   2. EN-TÊTE ET PHOTO 
+   ========================================= */
+header {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: var(--barbie-background);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--barbie-pink-dark);
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   3. CONTENEUR ET ONGLETS PRINCIPAUX
+   ========================================= */
+.tabs-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: var(--barbie-background);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3px solid var(--barbie-accent);
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--barbie-pink-dark);
+    flex-grow: 1;
+    border-radius: 0;
+}
+
+.tab-button:hover {
+    background-color: var(--barbie-pink-light);
+}
+
+.tab-button.active {
+    background-color: var(--barbie-pink-dark);
+    color: white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1) inset;
+    border-radius: 10px 10px 0 0;
+}
+
+/* =========================================
+   4. CONTENU DES ONGLETS & LISTES
+   ========================================= */
+.tab-content {
+    padding: 30px;
+    text-align: left;
+}
+
+.tab-content h2 {
+    border-bottom: 2px solid var(--barbie-accent);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Correction pour les listes non-stylées dans les onglets (ex: lettres de recommandation) */
+.tab-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tab-content li {
+    padding: 8px 0;
+    border-bottom: none; 
+}
+
+/* =========================================
    5. STYLES SPÉCIFIQUES & UNIFORMES (Barbiecore Global)
    ========================================= */
 
 /* --- A. Conteneur principal de style (Réalisations & Promesse) --- */
 .competence-bloc {
-    /* Style étendu pour être utilisé sur tous les blocs de contenu importants */
     text-align: left;
     margin: 25px auto;
     padding: 25px;
@@ -12,10 +125,12 @@
     background-color: var(--barbie-background); 
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    max-width: 700px; /* Conserver une taille lisible */
+    max-width: 700px; 
 }
 
 /* --- B. Titres dans les blocs --- */
+
+/* Style pour les titres H3/H4 dans Réalisations et Promesse (style d'accentuation) */
 .competence-bloc h3, 
 .competence-bloc h4 {
     color: var(--barbie-pink-dark);
@@ -23,15 +138,25 @@
     border-bottom: 2px solid var(--barbie-pink-light);
     padding-bottom: 10px;
     margin-bottom: 15px;
-    font-size: 1.5em; /* Taille uniforme pour les titres de réalisation */
+    font-size: 1.5em; 
 }
 
 .competence-bloc h4 {
-    font-size: 1.3em; /* Taille légèrement réduite pour les sous-titres de Promesse */
+    font-size: 1.3em; 
 }
 
-/* --- C. Style des listes --- */
+/* NOUVELLE RÈGLE : Uniformiser le style du titre "Avis LinkedIn" dans l'onglet Collègues */
+/* Il s'agit d'un H3 ou H4 sans le bloc .competence-bloc autour. On applique le même style de couleur et de bordure */
+#collegues h3, 
+#collegues h4 {
+    color: var(--barbie-pink-dark);
+    border-bottom: 2px solid var(--barbie-pink-light);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
 
+
+/* --- C. Style des listes (Puces rondes par défaut pour Réalisations/Promesse) --- */
 .competence-bloc ul {
     list-style: none;
     padding-left: 15px;
@@ -46,10 +171,9 @@
     padding-bottom: 5px;
 }
 
-/* 1. Puce Ronde Rose Fuchsia : APPLIQUÉE À TOUS les .competence-bloc (Réalisations et Promesse) */
-/* Rendre ce sélecteur plus spécifique que le sélecteur général de la puce, mais moins que le cœur. */
+/* Puce ronde rose fuchsia (défaut pour Réalisations et Promesse) */
 .competence-bloc li::before {
-    content: '•'; /* Puce ronde par défaut */
+    content: '•'; 
     color: var(--barbie-pink-dark);
     position: absolute;
     left: -10px; 
@@ -58,11 +182,9 @@
     line-height: 0; 
 }
 
-
-/* 2. Cœur Simple (♥) : APPLIQUÉ UNIQUEMENT À L'ONGLET COLLÈGUES (Priorité Maximale) */
-/* C'est ce sélecteur spécifique qui va remplacer la puce ronde par un cœur dans le seul onglet #collegues. */
+/* Cœur Simple (♥) : APPLIQUÉ UNIQUEMENT À L'ONGLET COLLÈGUES (Priorité Maximale) */
 #collegues .tab-content ul li::before {
-    content: '♥'; /* Cœur simple (prioritaire) */
+    content: '♥'; 
     color: var(--barbie-pink-dark);
     position: absolute;
     left: -15px; 
@@ -71,6 +193,7 @@
     line-height: 1; 
 }
 
+
 /* --- D. Cartes Sponsors (Ajusté et Uniformisé) --- */
 .sponsor-card {
     text-align: center;
@@ -78,8 +201,4 @@
     padding: 20px;
     margin: 20px auto;
     border-radius: 15px; 
-    border: 3px solid var(--barbie-accent); 
-    max-width: 300px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-/* ... (Le reste du CSS est identique et correct) ... */
+    border: 3px solid var(--barbie-
