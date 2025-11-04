@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Flair - Tech Barbie Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <img src="ma-photo.jpg" alt="Votre photo professionnelle" class="profile-pic">
+        <h1>[Votre Prénom] - Tech & French Flair</h1>
+        <p>Future [Votre Poste] chez French Flair</p>
+    </header>
+
+    <div class="tabs-container">
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'collegues')">
+                💖 Ce que mes collègues disent de moi
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'realisations')">
+                ✨ Mes Réalisations
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'promesse')">
+                🎯 Ma Promesse
+            </button>
+        </div>
+
+        <div id="collegues" class="tab-content">
+            <h2>L'Équipe parle...</h2>
+            <p>"[Citation positive 1 sur l'efficacité]"</p>
+            <p>"[Citation positive 2 sur l'esprit d'équipe]"</p>
+        </div>
+
+        <div id="realisations" class="tab-content" style="display: none;">
+            <h2>Mon Portfolio Tech</h2>
+            <ul>
+                <li>**Projet A :** [Décrivez votre réalisation la plus pertinente en 1 phrase]</li>
+                <li>**Projet B :** [Décrivez une autre réalisation technique]</li>
+                <li>*Lien vers votre autre portfolio/LinkedIn.*</li>
+            </ul>
+        </div>
+
+        <div id="promesse" class="tab-content" style="display: none;">
+            <h2>Engagée pour la Tech et l'Innovation</h2>
+            <p>**Ma promesse à French Flair :** [Votre promesse concise et percutante en lien avec l'entreprise et la tech].</p>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Déclare toutes les variables
+            var i, tabcontent, tablinks;
+
+            // Cache tous les contenus d'onglet
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Récupère tous les boutons et retire la classe "active"
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Affiche l'onglet actuel et ajoute la classe "active" au bouton
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Afficher le premier onglet au chargement
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelector('.tab-button').click();
+        });
+    </script>
+
+</body>
+</html>
