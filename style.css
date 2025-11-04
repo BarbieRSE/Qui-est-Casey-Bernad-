@@ -1,0 +1,7 @@
+/* Couleurs Barbie */
+:root {
+    --barbie-pink-dark: #DA1884; /* Rose Barbie Vif */
+    --barbie-pink-light: #FFC0CB; /* Rose Clair pour le fond (Pink W3C) */
+    --barbie-text: #4a4a4a; /* Texte gris foncé pour la lisibilité */
+    --barbie-accent: #f598a3; /* Un rose intermédiaire */
+}
