@@ -11,12 +11,13 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    /* Police professionnelle par défaut */
+    font-family: 'Arial', 'Helvetica Neue', sans-serif;
     background-color: var(--barbie-pink-light);
     color: var(--barbie-text);
     text-align: center;
     padding: 20px;
-    line-height: 1.6;
+    line-height: 1.6; /* Améliore la lisibilité */
 }
 
 h1, h2 {
@@ -29,15 +30,15 @@ h1, h2 {
    ========================================= */
 header {
     margin-bottom: 40px;
-    padding: 25px;
+    padding: 30px; /* Légèrement plus de padding pour l'aspect pro */
     background-color: var(--barbie-background);
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Ombre plus marquée */
 }
 
 .profile-pic {
-    width: 100px; 
-    height: 100px;
+    width: 120px; /* Légèrement plus grande */
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid var(--barbie-pink-dark);
@@ -48,18 +49,18 @@ header {
    3. CONTENEUR ET ONGLETS PRINCIPAUX
    ========================================= */
 .tabs-container {
-    max-width: 850px;
+    max-width: 900px; /* Augmente légèrement la largeur */
     margin: 0 auto;
     background-color: var(--barbie-background);
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Ombre plus pro */
     overflow: hidden;
 }
 
 .tabs {
     display: flex;
     justify-content: space-around;
-    border-bottom: 3px solid var(--barbie-accent);
+    border-bottom: 4px solid var(--barbie-accent); /* Bordure plus nette */
 }
 
 .tab-button {
@@ -67,9 +68,9 @@ header {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 15px 20px;
+    padding: 18px 25px; /* Plus d'espace pour l'aspect pro */
     transition: all 0.3s ease;
-    font-size: 1.1em;
+    font-size: 1.15em;
     font-weight: bold;
     color: var(--barbie-pink-dark);
     flex-grow: 1;
@@ -83,7 +84,8 @@ header {
 .tab-button.active {
     background-color: var(--barbie-pink-dark);
     color: white;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1) inset;
+    /* Box-shadow plus subtile */
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.1) inset;
     border-radius: 10px 10px 0 0;
 }
 
@@ -91,7 +93,7 @@ header {
    4. CONTENU DES ONGLETS & LISTES
    ========================================= */
 .tab-content {
-    padding: 30px;
+    padding: 35px; /* Uniformisation du padding pour plus de clarté */
     text-align: left;
 }
 
@@ -99,9 +101,10 @@ header {
     border-bottom: 2px solid var(--barbie-accent);
     padding-bottom: 10px;
     margin-top: 0;
+    margin-bottom: 30px; /* Plus d'espace après le sous-titre principal */
 }
 
-/* Correction pour les listes non-stylées dans les onglets (ex: lettres de recommandation) */
+/* Correction pour les listes (ex: lettres de recommandation dans Collègues) */
 .tab-content ul {
     list-style: none;
     padding-left: 0;
@@ -119,13 +122,14 @@ header {
 /* --- A. Conteneur principal de style (Réalisations & Promesse) --- */
 .competence-bloc {
     text-align: left;
-    margin: 25px auto;
+    margin: 30px auto;
     padding: 25px;
-    border: 3px solid var(--barbie-accent);
+    /* Bordure plus subtile, le focus est sur le titre à l'intérieur */
+    border: 1px solid var(--barbie-pink-light); 
     background-color: var(--barbie-background); 
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    max-width: 700px; 
+    border-radius: 10px; /* Légèrement moins arrondi */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Ombre très légère */
+    max-width: 750px; 
 }
 
 /* --- B. Titres dans les blocs --- */
@@ -135,14 +139,15 @@ header {
 .competence-bloc h4 {
     color: var(--barbie-pink-dark);
     margin-top: 0;
-    border-bottom: 2px solid var(--barbie-pink-light);
+    /* Bordure pour séparer le titre de son contenu */
+    border-bottom: 2px solid var(--barbie-pink-light); 
     padding-bottom: 10px;
     margin-bottom: 15px;
-    font-size: 1.5em; 
+    font-size: 1.4em; 
 }
 
 .competence-bloc h4 {
-    font-size: 1.3em; 
+    font-size: 1.2em; 
 }
 
 /* Règle d'uniformisation des titres de section (Avis, Piliers) */
@@ -150,25 +155,27 @@ header {
 #collegues h4,
 #promesse h3 {
     color: var(--barbie-pink-dark);
-    border-bottom: 2px solid var(--barbie-pink-light);
+    /* Ligne de séparation douce pour les grandes sections */
+    border-bottom: 2px solid var(--barbie-accent); 
     padding-bottom: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 
 /* --- C. Style des listes (Puces rondes par défaut pour Réalisations/Promesse) --- */
 .competence-bloc ul {
     list-style: none;
-    padding-left: 15px;
+    padding-left: 20px; /* Plus d'espace pour la puce */
     margin-top: 0;
 }
 
 .competence-bloc li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     padding-left: 10px;
     position: relative;
-    border-bottom: 1px dotted var(--barbie-pink-light);
-    padding-bottom: 5px;
+    /* Suppression de la bordure pointillée, trop distrayant */
+    border-bottom: none; 
+    padding-bottom: 0;
 }
 
 /* Puce ronde rose fuchsia (défaut pour Réalisations et Promesse) */
@@ -176,45 +183,51 @@ header {
     content: '•'; 
     color: var(--barbie-pink-dark);
     position: absolute;
-    left: -10px; 
-    top: 0.5em; 
-    font-size: 1.5em; 
-    line-height: 0; 
+    left: -15px; /* Mieux aligné */
+    top: 0.2em; 
+    font-size: 1.8em; /* Plus visible */
+    line-height: 1; 
 }
 
-/* Cœur Simple (♥) : APPLIQUÉ UNIQUEMENT À L'ONGLET COLLÈGUES (Priorité Maximale) */
+/* Cœur Simple (♥) : APPLIQUÉ UNIQUEMENT À L'ONGLET COLLÈGUES */
 #collegues .tab-content ul li::before {
     content: '♥'; 
     color: var(--barbie-pink-dark);
     position: absolute;
-    left: -15px; 
-    top: 5px;
-    font-size: 1em; 
+    left: -20px; /* Mieux aligné avec le reste de la liste */
+    top: 3px;
+    font-size: 1.2em; 
     line-height: 1; 
 }
-
 
 /* --- D. Cartes Sponsors (Ajusté et Uniformisé) --- */
 .sponsor-card {
     text-align: center;
     background-color: var(--barbie-background);
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 15px; 
+    padding: 25px;
+    margin: 25px auto;
+    border-radius: 10px; 
     border: 3px solid var(--barbie-accent); 
-    max-width: 300px;
+    max-width: 320px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .sponsor-pic {
-    width: 100px; 
-    height: 100px; 
+    width: 110px; 
+    height: 110px; 
     border-radius: 50%; 
     object-fit: cover; 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 5px solid var(--barbie-pink-dark); 
 }
 
+/* --- E. Style des séparateurs de piliers (pour #promesse) --- */
+.pillar-separator {
+    border: none;
+    border-top: 1px dashed var(--barbie-accent);
+    margin: 40px auto;
+    width: 60%; /* Rendu plus pro que 50% */
+}
 
 /* =========================================
    7. STYLES DES ONGLETS SECONDAIRES & VIDÉOS
@@ -223,8 +236,8 @@ header {
     display: flex;
     justify-content: space-around;
     border-bottom: 2px solid var(--barbie-accent);
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-top: 15px;
 }
 
 .subtab-button {
@@ -232,9 +245,9 @@ header {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 12px 18px;
     transition: 0.3s;
-    font-size: 1em;
+    font-size: 1.05em;
     font-weight: 600;
     color: var(--barbie-text);
     flex-grow: 1;
@@ -251,7 +264,7 @@ header {
 }
 
 .subtab-content {
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 /* Style des images des collègues (avis) */
@@ -265,8 +278,7 @@ header {
 
 /* Style des vidéos intégrées (centrage et taille) */
 .video-in-realisation {
-    /* La largeur a été réduite pour mieux contenir le Short RPS */
-    max-width: 350px; 
+    max-width: 400px; /* Légèrement élargi pour un look plus moderne */
     margin: 20px auto; 
     text-align: center;
 }
