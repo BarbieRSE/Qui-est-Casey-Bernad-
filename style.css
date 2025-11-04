@@ -2,17 +2,18 @@
    1. COULEURS ET POLICES 
    ========================================= */
 :root {
-    --barbie-pink-dark: #DA1884; /* Rose Vif (Boutons actifs, accents) */
+    /* Couleurs pour un style "Barbiecore Impact" */
+    --barbie-pink-dark: #DA1884; /* Rose Vif (Boutons actifs, accents forts, cœurs) */
     --barbie-pink-light: #FEE7F2; /* Rose Très Clair (Fond de page) */
-    --barbie-accent: #E584A2; /* Rose Intermédiaire */
+    --barbie-accent: #E584A2; /* Rose Intermédiaire (Bordures principales) */
     --barbie-text: #2c2c2c; /* Gris très foncé (pour l'accessibilité) */
     --barbie-background: white; /* Fond des blocs principaux pour la clarté */
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: var(--barbie-pink-light); /* Fond Rose Pâle */
-    color: var(--barbie-text); /* Texte foncé pour la lisibilité */
+    background-color: var(--barbie-pink-light);
+    color: var(--barbie-text);
     text-align: center;
     padding: 20px;
     line-height: 1.6;
@@ -37,9 +38,9 @@ header {
 .profile-pic {
     width: 100px; 
     height: 100px;
-    border-radius: 50%; /* Image ronde */
+    border-radius: 50%;
     object-fit: cover;
-    border: 5px solid var(--barbie-pink-dark); /* Bordure Rose Vif */
+    border: 5px solid var(--barbie-pink-dark);
     margin-bottom: 15px;
 }
 
@@ -55,7 +56,6 @@ header {
     overflow: hidden;
 }
 
-/* Barre des boutons principaux */
 .tabs {
     display: flex;
     justify-content: space-around;
@@ -84,7 +84,7 @@ header {
     background-color: var(--barbie-pink-dark);
     color: white;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1) inset;
-    border-radius: 10px 10px 0 0; /* Coins arrondis pour le bouton actif */
+    border-radius: 10px 10px 0 0;
 }
 
 /* =========================================
@@ -101,52 +101,26 @@ header {
     margin-top: 0;
 }
 
-/* Style pour les listes de réalisations et promesses */
+/* Correction pour les listes non-stylées dans les onglets (ex: lettres de recommandation) */
 .tab-content ul {
-    list-style: none; /* Enlève les points par défaut */
+    list-style: none;
     padding-left: 0;
 }
 
 .tab-content li {
     padding: 8px 0;
-    border-bottom: 1px dotted var(--barbie-pink-light);
-}
-
-/* Images des collègues */
-.tab-content img {
-    margin-top: 15px;
-    display: block; /* S'assure que l'image prend toute la ligne */
+    /* La ligne pointillée est gérée par .competence-bloc li pour l'uniformité */
+    border-bottom: none; 
 }
 
 /* =========================================
-   5. STYLE DES SOUS-ONGLETS (DANS L'ONGLET COLLÈGUES)
+   5. STYLES SPÉCIFIQUES & UNIFORMES (Barbiecore Global)
    ========================================= */
 
-.subtabs {
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 2px solid var(--barbie-accent);
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
-.subtab-button {
-    background-color: var(--barbie-pink-light);
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 10px 15px;
-    transition: 0.3s;
-    font-size: 1em;
-    font-weight: 600;
-    color: var(--barbie-text);
-    flex-grow: 1;
-}
-
-.subtab-button:hover {
-    background-color: var(--barbie-accent);
-    color: white;
-}
-
-.subtab-button.active {
-    background-color: var(--barbie-pink
+/* --- A. Conteneur principal de style (Réalisations & Promesse) --- */
+.competence-bloc {
+    /* Style étendu pour être utilisé sur tous les blocs de contenu importants */
+    text-align: left;
+    margin: 25px auto;
+    padding: 25px;
+    border
