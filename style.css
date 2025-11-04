@@ -145,7 +145,7 @@ header {
     font-size: 1.3em; /* Taille légèrement réduite pour les sous-titres de Promesse */
 }
 
-/* --- C. Style des listes (avec cœurs) --- */
+/* --- C. Style des listes (Puce Ronde par défaut pour Réalisations/Promesse) --- */
 .competence-bloc ul {
     list-style: none;
     padding-left: 15px;
@@ -160,35 +160,48 @@ header {
     padding-bottom: 5px;
 }
 
+/* Puce ronde rose fuchsia (défaut pour Réalisations et Promesse) */
 .competence-bloc li::before {
-    content: '💖';
+    content: '•'; 
     color: var(--barbie-pink-dark);
     position: absolute;
-    left: -15px;
-    top: 5px;
-    font-size: 0.8em;
+    left: -10px; 
+    top: 0.5em; 
+    font-size: 1.5em; 
+    line-height: 0; 
 }
 
-/* --- D. Cartes Sponsors (Ajusté au nouveau style) --- */
+/* Style spécifique pour l'onglet Collègues : Cœur simple (prioritaire) */
+#collegues .tab-content ul li::before {
+    content: '♥'; /* Cœur simple */
+    color: var(--barbie-pink-dark);
+    position: absolute;
+    left: -15px; 
+    top: 5px;
+    font-size: 1em; 
+    line-height: 1; 
+}
+
+
+/* --- D. Cartes Sponsors (Ajusté et Uniformisé) --- */
 .sponsor-card {
-    /* Utilise la même structure visuelle que .competence-bloc */
     text-align: center;
     background-color: var(--barbie-background);
     padding: 20px;
     margin: 20px auto;
-    border-radius: 15px; /* Plus arrondi */
-    border: 3px solid var(--barbie-accent); /* Bordure épaisse */
+    border-radius: 15px; 
+    border: 3px solid var(--barbie-accent); 
     max-width: 300px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre prononcée */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .sponsor-pic {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 100px; /* Uniformisé avec la photo de profil */
+    height: 100px; 
+    border-radius: 50%; /* Rendre la photo ronde */
+    object-fit: cover; 
     margin-bottom: 10px;
-    border: 3px solid var(--barbie-pink-dark);
+    border: 5px solid var(--barbie-pink-dark); /* Bordure rose fuchsia (comme la vôtre) */
 }
 
 
