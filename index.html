@@ -1,44 +1,86 @@
-<div id="realisations" class="tab-content" style="display: none;">
-    <h2>✨ Mon Portfolio Impact & Inclusion</h2>
-    <p>Mes réalisations reflètent mon approche immersive et fédératrice : utiliser la créativité et l'empathie pour initier un dialogue et transformer l'entreprise.</p>
-    
-    <div class="competence-bloc">
-        <h3>📅 2025 : Installation Artistique sur les RPS</h3>
-        <ul>
-            <li><strong>Le Concept :</strong> Création d'une <strong>installation artistique cynique et critique</strong> sur les Risques Psychosociaux (RPS), conçue avec la Génération Ascenseur en 1 journée et avec 0€ de budget (séminaire "Art Thinking").</li>
-            <li><strong>L'Impact :</strong> L'œuvre a initié un <strong>dialogue crucial</strong> sur la protection de la santé mentale des salariés face aux réponses parfois inadaptées.</li>
-        </ul>
-        <div class="video-in-realisation">
-            <iframe width="100%" height="315" src="[LIEN D'INTÉGRATION YOUTUBE ŒUVRE D'ART]" title="Installation artistique RPS vidéo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casey Bernad - French Flair - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="ma-photo.jpg" alt="Votre photo professionnelle" class="profile-pic">
+        <h1> Casey Bernad - French Flair</h1>
+        <p>Experte Handicap et inclusion : Levier d'Innovation et de Performance</p>
+    </header>
+
+    <div class="tabs-container">
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'collegues')">
+                💖 Ce que mes collègues disent de moi
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'realisations')">
+                ✨ Mes Réalisations
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'promesse')">
+                🎯 Ma Promesse
+            </button>
         </div>
-    </div>
-    <div class="competence-bloc">
-        <h3>📅 2024-2025 : Engagement RSE des Collaborateurs Nespresso</h3>
-        <ul>
-            <li><strong>L'Outil :</strong> Déploiement d'un challenge des mobilités douces, utilisant la vidéo comme support d'appropriation dans tous les sites et de l'objet totem des lunettes vertes pour mobiliser les collaborateurs Nespresso dans tous les sites.</li>
-            <li><strong>La Stratégie :</strong> Ce format vidéo est parfaitement duplicable pour la <strong>sensibilisation au handicap</strong> pour les clients de French Flair.</li>
-        </ul>
-        <div class="video-in-realisation">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/agyoMHfRnag" title="YouTube video player Nespresso" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <div id="collegues" class="tab-content">
+            <h2>❤️ Avis, Recommandations & Sponsors</h2>
+
+            <div class="subtabs">
+                <button class="subtab-button active" onclick="openSubTab(event, 'avis-recos')">
+                    Avis & Recommandations
+                </button>
+                <button class="subtab-button" onclick="openSubTab(event, 'sponsors')">
+                    Mes sponsors chez KPMG
+                </button>
+            </div>
+
+            <div id="avis-recos" class="subtab-content">
+                <h3>Avis LinkedIn & Recommandations</h3>
+                <p>L'engagement, la collaboration et la bonne humeur sont mes super-pouvoirs.</p>
+
+                <img src="collegue-1.jpg" alt="Avis de collègue 1" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
+                <img src="collegue-2.jpg" alt="Avis de collègue 2" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
+                
+                <h4 style="color: var(--barbie-pink-dark);">Lettres de Recommandation :</h4>
+                <ul>
+                    <li>📄 <a href="Lettre de recommandation Bernad Bazillon pour Casey Bernad.pdf" target="_blank">Lettre de recommandation de Bernad Bazillon</a></li>
+                    <li>📄 <a href="Lettre de recommandation Jérémy pour Casey (1).pdf" target="_blank">Lettre de recommandation de Jérémy</a></li>
+                </ul>
+                <p style="font-size: 0.9em; color: gray;">*Assurez-vous que ces fichiers PDF sont bien présents dans le même répertoire que votre page index.html !*</p>
+            </div>
+
+            <div id="sponsors" class="subtab-content" style="display: none;">
+                <h3>Mes sponsors chez KPMG (Direction & Inclusion)</h3>
+                
+                <div class="sponsor-card">
+                    <img src="sponsor-rama.jpg" alt="Photo de Rama Sow" class="sponsor-pic">
+                    <h4>🧩 Rama Sow</h4>
+                    <p>Directeur Inclusion KPMG</p>
+                    <p>📧 <a href="mailto:rsow@kpmg.fr">rsow@kpmg.fr</a></p>
+                    <p>🔗 <a href="[LIEN RÉEL LINKEDIN RAMA SOW]" target="_blank">Profil LinkedIn</a></p>
+                </div>
+
+                <div class="sponsor-card">
+                    <img src="sponsor-sophie.jpg" alt="Photo de Sophie Maladri" class="sponsor-pic">
+                    <h4>🧩 Sophie Maladri</h4>
+                    <p>Manager RH KPMG</p>
+                    <p>📧 <a href="mailto:smaladri@rydge.fr">smaladri@rydge.fr</a></p>
+                    <p>🔗 <a href="[LIEN RÉEL LINKEDIN SOPHIE MALADRI]" target="_blank">Profil LinkedIn</a></p>
+                </div>
+                <p style="font-size: 0.9em; margin-top: 20px;">Leurs coordonnées sont fournies avec leur accord.</p>
+            </div>
         </div>
-    </div>
-    <div class="competence-bloc">
-        <h3>📅 2024 : Co-fondatrice des Assises de l'Égalité</h3>
-        <ul>
-            <li><strong>Le Concept :</strong> Journée immersive invitant les décideurs à écouter les premiers concernés par l'inégalité des chances.</li>
-            <li><strong>L'Innovation :</strong> Nous sommes allées au-delà des tables rondes, intégrant des <strong>expériences immersives</strong> (marche de l'égalité des chances, quizz de l'égalité des chances, ateliers simulation micro-agressions) pour changer les représentations par le puissant vecteur de l'empathie.</li>
-            <li>*Article descriptif :* <a href="[LIEN RÉEL VERS L'ARTICLE DÉCRIVANT LES ASSISES]" target="_blank">L'Essentiel sur Les Assises de l'Égalité 2024</a></li>
-        </ul>
-        <div class="video-in-realisation">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/NfwS7A4JVLs?si=KF-lmLA4rGctPf7w" title="Assises de l'Égalité vidéo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </div>
-    <div class="competence-bloc">
-        <h3>⭐ Expertise et Veille active (LinkedIn)</h3>
-        <ul>
-            <li><strong>Exemple récent :</strong> Newsletter sur l'inclusion des diversités religieuses, preuve d'une capacité à <strong>maîtriser rapidement des sujets complexes</strong> (3 jours de recherche à la BNF).</li>
-            <li><strong>Ma Promesse :</strong> J'appliquerai la même rigueur et curiosité pour développer l'expertise sur le handicap.</li>
-            <li>*Lien :* <a href="[LIEN RÉEL VERS VOTRE ARTICLE LINKEDIN]" target="_blank">Article LinkedIn sur l'Inclusion des Diversités Religieuses</a></li>
-        </ul>
-    </div>
-    </div>
+
+        <div id="realisations" class="tab-content" style="display: none;">
+            <h2>✨ Mon Portfolio Impact & Inclusion</h2>
+            <p>Mes réalisations reflètent mon approche immersive et fédératrice : utiliser la créativité et l'empathie pour initier un dialogue et transformer l'entreprise.</p>
+            
+            <div class="competence-bloc">
+                <h3>📅 2025 : Installation Artistique sur les RPS</h3>
+                <ul>
+                    <li><strong>Le Concept :</strong> Création d'une <strong>installation artistique cynique et critique</strong> sur les Risques Psychosociaux (RPS), conçue avec la Génération Ascenseur en 1 journée et avec 0€ de budget (séminaire "Art Thinking").
