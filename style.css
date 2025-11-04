@@ -35,7 +35,6 @@ header {
 }
 
 .profile-pic {
-    /* La taille réduite que vous avez demandée */
     width: 100px; 
     height: 100px;
     border-radius: 50%; /* Image ronde */
@@ -45,7 +44,7 @@ header {
 }
 
 /* =========================================
-   3. CONTENEUR ET ONGLETS 
+   3. CONTENEUR ET ONGLETS PRINCIPAUX
    ========================================= */
 .tabs-container {
     max-width: 850px;
@@ -56,7 +55,7 @@ header {
     overflow: hidden;
 }
 
-/* Barre des boutons */
+/* Barre des boutons principaux */
 .tabs {
     display: flex;
     justify-content: space-around;
@@ -89,7 +88,7 @@ header {
 }
 
 /* =========================================
-   4. CONTENU DES ONGLETS 
+   4. CONTENU DES ONGLETS & LISTES
    ========================================= */
 .tab-content {
     padding: 30px;
@@ -102,7 +101,7 @@ header {
     margin-top: 0;
 }
 
-/* Style pour les listes de réalisations */
+/* Style pour les listes de réalisations et promesses */
 .tab-content ul {
     list-style: none; /* Enlève les points par défaut */
     padding-left: 0;
@@ -118,3 +117,36 @@ header {
     margin-top: 15px;
     display: block; /* S'assure que l'image prend toute la ligne */
 }
+
+/* =========================================
+   5. STYLE DES SOUS-ONGLETS (DANS L'ONGLET COLLÈGUES)
+   ========================================= */
+
+.subtabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid var(--barbie-accent);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.subtab-button {
+    background-color: var(--barbie-pink-light);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--barbie-text);
+    flex-grow: 1;
+}
+
+.subtab-button:hover {
+    background-color: var(--barbie-accent);
+    color: white;
+}
+
+.subtab-button.active {
+    background-color: var(--barbie-pink
