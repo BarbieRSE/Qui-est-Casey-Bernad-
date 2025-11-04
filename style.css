@@ -123,4 +123,125 @@ header {
     text-align: left;
     margin: 25px auto;
     padding: 25px;
-    border
+    border: 3px solid var(--barbie-accent);
+    background-color: var(--barbie-background); 
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    max-width: 700px; /* Conserver une taille lisible */
+}
+
+/* --- B. Titres dans les blocs --- */
+.competence-bloc h3, 
+.competence-bloc h4 {
+    color: var(--barbie-pink-dark);
+    margin-top: 0;
+    border-bottom: 2px solid var(--barbie-pink-light);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.5em; /* Taille uniforme pour les titres de réalisation */
+}
+
+.competence-bloc h4 {
+    font-size: 1.3em; /* Taille légèrement réduite pour les sous-titres de Promesse */
+}
+
+/* --- C. Style des listes (avec cœurs) --- */
+.competence-bloc ul {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 0;
+}
+
+.competence-bloc li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+    border-bottom: 1px dotted var(--barbie-pink-light);
+    padding-bottom: 5px;
+}
+
+.competence-bloc li::before {
+    content: '💖';
+    color: var(--barbie-pink-dark);
+    position: absolute;
+    left: -15px;
+    top: 5px;
+    font-size: 0.8em;
+}
+
+/* --- D. Cartes Sponsors (Ajusté au nouveau style) --- */
+.sponsor-card {
+    /* Utilise la même structure visuelle que .competence-bloc */
+    text-align: center;
+    background-color: var(--barbie-background);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px; /* Plus arrondi */
+    border: 3px solid var(--barbie-accent); /* Bordure épaisse */
+    max-width: 300px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre prononcée */
+}
+
+.sponsor-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid var(--barbie-pink-dark);
+}
+
+
+/* =========================================
+   7. STYLES DES ONGLETS SECONDAIRES & VIDÉOS
+   ========================================= */
+.subtabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid var(--barbie-accent);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.subtab-button {
+    background-color: var(--barbie-pink-light);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--barbie-text);
+    flex-grow: 1;
+}
+
+.subtab-button:hover {
+    background-color: var(--barbie-accent);
+    color: white;
+}
+
+.subtab-button.active {
+    background-color: var(--barbie-pink-dark);
+    color: white;
+}
+
+.subtab-content {
+    padding: 10px 0;
+}
+
+/* Style des images des collègues (avis) */
+.tab-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Style des vidéos intégrées (centrage et taille) */
+.video-in-realisation {
+    max-width: 600px; 
+    margin: 20px auto; 
+    text-align: center;
+}
