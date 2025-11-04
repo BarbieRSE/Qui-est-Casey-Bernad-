@@ -146,7 +146,6 @@ header {
 }
 
 /* NOUVELLE RÈGLE : Uniformiser le style du titre "Avis LinkedIn" dans l'onglet Collègues */
-/* Il s'agit d'un H3 ou H4 sans le bloc .competence-bloc autour. On applique le même style de couleur et de bordure */
 #collegues h3, 
 #collegues h4 {
     color: var(--barbie-pink-dark);
@@ -201,4 +200,72 @@ header {
     padding: 20px;
     margin: 20px auto;
     border-radius: 15px; 
-    border: 3px solid var(--barbie-
+    border: 3px solid var(--barbie-accent); 
+    max-width: 300px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.sponsor-pic {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-bottom: 10px;
+    border: 5px solid var(--barbie-pink-dark); 
+}
+
+
+/* =========================================
+   7. STYLES DES ONGLETS SECONDAIRES & VIDÉOS
+   ========================================= */
+.subtabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid var(--barbie-accent);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.subtab-button {
+    background-color: var(--barbie-pink-light);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--barbie-text);
+    flex-grow: 1;
+}
+
+.subtab-button:hover {
+    background-color: var(--barbie-accent);
+    color: white;
+}
+
+.subtab-button.active {
+    background-color: var(--barbie-pink-dark);
+    color: white;
+}
+
+.subtab-content {
+    padding: 10px 0;
+}
+
+/* Style des images des collègues (avis) */
+.tab-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Style des vidéos intégrées (centrage et taille) */
+.video-in-realisation {
+    /* La largeur a été réduite pour mieux contenir le Short RPS */
+    max-width: 350px; 
+    margin: 20px auto; 
+    text-align: center;
+}
