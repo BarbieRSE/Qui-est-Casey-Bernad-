@@ -1,23 +1,120 @@
-/* Couleurs Barbie */
+/* =========================================
+   1. COULEURS ET POLICES 
+   ========================================= */
 :root {
-    --barbie-pink-dark: #DA1884; /* Rose Barbie Vif */
-    --barbie-pink-light: #FFC0CB; /* Rose Clair pour le fond (Pink W3C) */
-    --barbie-text: #4a4a4a; /* Texte gris foncé pour la lisibilité */
-    --barbie-accent: #f598a3; /* Un rose intermédiaire */
+    --barbie-pink-dark: #DA1884; /* Rose Vif (Boutons actifs, accents) */
+    --barbie-pink-light: #FEE7F2; /* Rose Très Clair (Fond de page) */
+    --barbie-accent: #E584A2; /* Rose Intermédiaire */
+    --barbie-text: #2c2c2c; /* Gris très foncé (pour l'accessibilité) */
+    --barbie-background: white; /* Fond des blocs principaux pour la clarté */
 }
 
-/* ⬅️ IL MANQUE CE BLOC CLÉ ! */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: var(--barbie-pink-light); /* ⬅️ C'est cette ligne qui peint le fond en rose ! */
-    color: var(--barbie-text);
+    background-color: var(--barbie-pink-light); /* Fond Rose Pâle */
+    color: var(--barbie-text); /* Texte foncé pour la lisibilité */
     text-align: center;
     padding: 20px;
+    line-height: 1.6;
 }
-/* ➡️ ET TOUT LE RESTE DU CODE POUR LE STYLE DES BOUTONS, etc. */
 
+h1, h2 {
+    color: var(--barbie-pink-dark);
+    font-weight: 700;
+}
+
+/* =========================================
+   2. EN-TÊTE ET PHOTO 
+   ========================================= */
 header {
     margin-bottom: 40px;
-    /* ... et tout le reste du style ! */
+    padding: 25px;
+    background-color: var(--barbie-background);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
-/* ... */
+
+.profile-pic {
+    /* La taille réduite que vous avez demandée */
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; /* Image ronde */
+    object-fit: cover;
+    border: 5px solid var(--barbie-pink-dark); /* Bordure Rose Vif */
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   3. CONTENEUR ET ONGLETS 
+   ========================================= */
+.tabs-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: var(--barbie-background);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Barre des boutons */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3px solid var(--barbie-accent);
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--barbie-pink-dark);
+    flex-grow: 1;
+    border-radius: 0;
+}
+
+.tab-button:hover {
+    background-color: var(--barbie-pink-light);
+}
+
+.tab-button.active {
+    background-color: var(--barbie-pink-dark);
+    color: white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1) inset;
+    border-radius: 10px 10px 0 0; /* Coins arrondis pour le bouton actif */
+}
+
+/* =========================================
+   4. CONTENU DES ONGLETS 
+   ========================================= */
+.tab-content {
+    padding: 30px;
+    text-align: left;
+}
+
+.tab-content h2 {
+    border-bottom: 2px solid var(--barbie-accent);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Style pour les listes de réalisations */
+.tab-content ul {
+    list-style: none; /* Enlève les points par défaut */
+    padding-left: 0;
+}
+
+.tab-content li {
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--barbie-pink-light);
+}
+
+/* Images des collègues */
+.tab-content img {
+    margin-top: 15px;
+    display: block; /* S'assure que l'image prend toute la ligne */
+}
