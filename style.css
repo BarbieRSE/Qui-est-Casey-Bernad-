@@ -5,3 +5,19 @@
     --barbie-text: #4a4a4a; /* Texte gris foncé pour la lisibilité */
     --barbie-accent: #f598a3; /* Un rose intermédiaire */
 }
+
+/* ⬅️ IL MANQUE CE BLOC CLÉ ! */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--barbie-pink-light); /* ⬅️ C'est cette ligne qui peint le fond en rose ! */
+    color: var(--barbie-text);
+    text-align: center;
+    padding: 20px;
+}
+/* ➡️ ET TOUT LE RESTE DU CODE POUR LE STYLE DES BOUTONS, etc. */
+
+header {
+    margin-bottom: 40px;
+    /* ... et tout le reste du style ! */
+}
+/* ... */
