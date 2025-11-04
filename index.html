@@ -26,15 +26,54 @@
                 🎯 Ma Promesse
             </button>
         </div>
+<div id="collegues" class="tab-content">
+    <h2>❤️ Avis, Recommandations & Sponsors</h2>
 
-        <div id="collegues" class="tab-content">
-            <h2>❤️ Ce que mes collègues disent de moi</h2>
-            <p>L'engagement, la collaboration et la bonne humeur sont mes super-pouvoirs. :</p>
-            
-            <img src="collegue-1.jpg" alt="Photo d'une recommandation de collègue 1" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
+    <div class="subtabs">
+        <button class="subtab-button active" onclick="openSubTab(event, 'avis-recos')">
+            Avis & Recommandations
+        </button>
+        <button class="subtab-button" onclick="openSubTab(event, 'sponsors')">
+            Mes sponsors chez KPMG
+        </button>
+    </div>
 
-            <img src="collegue-2.jpg" alt="Photo d'une recommandation de collègue 2" style="max-width: 100%; height: auto; border-radius: 8px;">
-        </div>
+    <div id="avis-recos" class="subtab-content">
+        <h3>Avis LinkedIn & Recommandations</h3>
+        <p>L'engagement, la collaboration et la bonne humeur sont mes super-pouvoirs.</p>
+
+        <img src="collegue-1.jpg" alt="Avis de collègue 1" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
+        <img src="collegue-2.jpg" alt="Avis de collègue 2" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
+        
+        <h4 style="color: var(--barbie-pink-dark);">Lettres de Recommandation :</h4>
+        <ul>
+            <li>📄 <a href="[Lien vers la lettre de Marie Lefort PDF]" target="_blank">Lettre de recommandation de Marie Lefort</a></li>
+            <li>📄 <a href="[Lien vers la lettre de Thomas Girard PDF]" target="_blank">Lettre de recommandation de Thomas Girard</a></li>
+        </ul>
+        <p style="font-size: 0.9em; color: gray;">*N'oubliez pas d'héberger ces PDF pour que les liens fonctionnent !*</p>
+    </div>
+
+    <div id="sponsors" class="subtab-content" style="display: none;">
+        <h3>Mes sponsors chez KPMG (Direction & Inclusion)</h3>
+        
+        <div class="sponsor-card">
+            <img src="sponsor-jean.jpg" alt="Photo de Jean Dupont" class="sponsor-pic">
+            <h4>🧩 Jean Dupont</h4>
+            <p>Directeur Inclusion KPMG</p>
+            <p>📧 <a href="mailto:jean.dupont@kpmg.fr">jean.dupont@kpmg.fr</a></p>
+            <p>🔗 <a href="[Lien LinkedIn Jean Dupont]" target="_blank">Profil LinkedIn</a></p>
+        </div>
+
+        <div class="sponsor-card">
+            <img src="sponsor-sophie.jpg" alt="Photo de Sophie Lambert" class="sponsor-pic">
+            <h4>🧩 Sophie Lambert</h4>
+            <p>Manager RH KPMG</p>
+            <p>📧 <a href="mailto:sophie.lambert@kpmg.fr">sophie.lambert@kpmg.fr</a></p>
+            <p>🔗 <a href="[Lien LinkedIn Sophie Lambert]" target="_blank">Profil LinkedIn</a></p>
+        </div>
+        <p style="font-size: 0.9em; margin-top: 20px;">Leurs coordonnées sont fournies avec leur accord.</p>
+    </div>
+</div>
 
         <div id="realisations" class="tab-content" style="display: none;">
     <h2>✨ Mon Portfolio Impact & Inclusion</h2>
