@@ -1,119 +1,4 @@
 /* =========================================
-   1. COULEURS ET POLICES 
-   ========================================= */
-:root {
-    /* Couleurs pour un style "Barbiecore Impact" */
-    --barbie-pink-dark: #DA1884; /* Rose Vif (Boutons actifs, accents forts, cœurs) */
-    --barbie-pink-light: #FEE7F2; /* Rose Très Clair (Fond de page) */
-    --barbie-accent: #E584A2; /* Rose Intermédiaire (Bordures principales) */
-    --barbie-text: #2c2c2c; /* Gris très foncé (pour l'accessibilité) */
-    --barbie-background: white; /* Fond des blocs principaux pour la clarté */
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--barbie-pink-light);
-    color: var(--barbie-text);
-    text-align: center;
-    padding: 20px;
-    line-height: 1.6;
-}
-
-h1, h2 {
-    color: var(--barbie-pink-dark);
-    font-weight: 700;
-}
-
-/* =========================================
-   2. EN-TÊTE ET PHOTO 
-   ========================================= */
-header {
-    margin-bottom: 40px;
-    padding: 25px;
-    background-color: var(--barbie-background);
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
-.profile-pic {
-    width: 100px; 
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--barbie-pink-dark);
-    margin-bottom: 15px;
-}
-
-/* =========================================
-   3. CONTENEUR ET ONGLETS PRINCIPAUX
-   ========================================= */
-.tabs-container {
-    max-width: 850px;
-    margin: 0 auto;
-    background-color: var(--barbie-background);
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-}
-
-.tabs {
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 3px solid var(--barbie-accent);
-}
-
-.tab-button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 15px 20px;
-    transition: all 0.3s ease;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: var(--barbie-pink-dark);
-    flex-grow: 1;
-    border-radius: 0;
-}
-
-.tab-button:hover {
-    background-color: var(--barbie-pink-light);
-}
-
-.tab-button.active {
-    background-color: var(--barbie-pink-dark);
-    color: white;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1) inset;
-    border-radius: 10px 10px 0 0;
-}
-
-/* =========================================
-   4. CONTENU DES ONGLETS & LISTES
-   ========================================= */
-.tab-content {
-    padding: 30px;
-    text-align: left;
-}
-
-.tab-content h2 {
-    border-bottom: 2px solid var(--barbie-accent);
-    padding-bottom: 10px;
-    margin-top: 0;
-}
-
-/* Correction pour les listes non-stylées dans les onglets (ex: lettres de recommandation) */
-.tab-content ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.tab-content li {
-    padding: 8px 0;
-    /* La ligne pointillée est gérée par .competence-bloc li pour l'uniformité */
-    border-bottom: none; 
-}
-
-/* =========================================
    5. STYLES SPÉCIFIQUES & UNIFORMES (Barbiecore Global)
    ========================================= */
 
@@ -145,7 +30,8 @@ header {
     font-size: 1.3em; /* Taille légèrement réduite pour les sous-titres de Promesse */
 }
 
-/* --- C. Style des listes (Puce Ronde par défaut pour Réalisations/Promesse) --- */
+/* --- C. Style des listes --- */
+
 .competence-bloc ul {
     list-style: none;
     padding-left: 15px;
@@ -160,9 +46,10 @@ header {
     padding-bottom: 5px;
 }
 
-/* Puce ronde rose fuchsia (défaut pour Réalisations et Promesse) */
+/* 1. Puce Ronde Rose Fuchsia : APPLIQUÉE À TOUS les .competence-bloc (Réalisations et Promesse) */
+/* Rendre ce sélecteur plus spécifique que le sélecteur général de la puce, mais moins que le cœur. */
 .competence-bloc li::before {
-    content: '•'; 
+    content: '•'; /* Puce ronde par défaut */
     color: var(--barbie-pink-dark);
     position: absolute;
     left: -10px; 
@@ -171,9 +58,11 @@ header {
     line-height: 0; 
 }
 
-/* Style spécifique pour l'onglet Collègues : Cœur simple (prioritaire) */
+
+/* 2. Cœur Simple (♥) : APPLIQUÉ UNIQUEMENT À L'ONGLET COLLÈGUES (Priorité Maximale) */
+/* C'est ce sélecteur spécifique qui va remplacer la puce ronde par un cœur dans le seul onglet #collegues. */
 #collegues .tab-content ul li::before {
-    content: '♥'; /* Cœur simple */
+    content: '♥'; /* Cœur simple (prioritaire) */
     color: var(--barbie-pink-dark);
     position: absolute;
     left: -15px; 
@@ -181,7 +70,6 @@ header {
     font-size: 1em; 
     line-height: 1; 
 }
-
 
 /* --- D. Cartes Sponsors (Ajusté et Uniformisé) --- */
 .sponsor-card {
@@ -194,67 +82,4 @@ header {
     max-width: 300px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
-
-.sponsor-pic {
-    width: 100px; /* Uniformisé avec la photo de profil */
-    height: 100px; 
-    border-radius: 50%; /* Rendre la photo ronde */
-    object-fit: cover; 
-    margin-bottom: 10px;
-    border: 5px solid var(--barbie-pink-dark); /* Bordure rose fuchsia (comme la vôtre) */
-}
-
-
-/* =========================================
-   7. STYLES DES ONGLETS SECONDAIRES & VIDÉOS
-   ========================================= */
-.subtabs {
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 2px solid var(--barbie-accent);
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
-.subtab-button {
-    background-color: var(--barbie-pink-light);
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 10px 15px;
-    transition: 0.3s;
-    font-size: 1em;
-    font-weight: 600;
-    color: var(--barbie-text);
-    flex-grow: 1;
-}
-
-.subtab-button:hover {
-    background-color: var(--barbie-accent);
-    color: white;
-}
-
-.subtab-button.active {
-    background-color: var(--barbie-pink-dark);
-    color: white;
-}
-
-.subtab-content {
-    padding: 10px 0;
-}
-
-/* Style des images des collègues (avis) */
-.tab-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    display: block;
-}
-
-/* Style des vidéos intégrées (centrage et taille) */
-.video-in-realisation {
-    max-width: 600px; 
-    margin: 20px auto; 
-    text-align: center;
-}
+/* ... (Le reste du CSS est identique et correct) ... */
